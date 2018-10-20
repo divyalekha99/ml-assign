@@ -38,6 +38,8 @@ def count_(filename):
     w_dict= text.read().lower().split()
     w_c= {}
     for w in w_dict:
+        if ',' in w or  '.' in w:
+            w= w[0:-1]
         if w not in w_c:
             w_c[w] = 0
         w_c[w] += 1 
@@ -46,7 +48,7 @@ def count_(filename):
 def print_top(filename):
     word_count= count_(filename)
     s = sorted(word_count.items(), key=operator.itemgetter(1),reverse=True)
-    print (s)
+   # print (s)
     for key in range(20):
         print( s[key][0],s[key][1])
    
