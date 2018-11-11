@@ -48,7 +48,7 @@ while(1):
                 break
             else:
                 i=-1
-    if p.v_type!="Bus" or p.v_type!="Car" or p.v_type!="MotorCycle":
+    if p.v_type!="Bus" and p.v_type!="Car" and p.v_type!="MotorCycle":
         print(" Please enter the type of vehicle")
         sys.exit(1)
            
@@ -60,6 +60,7 @@ while(1):
         print(pa.v_id +"\n"+ pa.v_type+ "\n" + pa.p_id)
     print("*********************\n")
     a=input("\n Would you like to park? (Y/N):")
-    if (a =='N'):
+   if (a =='Y'):
+        continue
+    else:
         break
-        
