@@ -60,7 +60,7 @@ while(1):
         print(pa.v_id +"\n"+ pa.v_type+ "\n" + pa.p_id)
     print("*********************\n")
     a=input("\n Would you like to park? (Y/N):")
-   if (a =='Y'):
+    if (a =='Y'):
         continue
     else:
         break
